@@ -1,7 +1,7 @@
-import diseases from './builtins/diseases';
-import labTests from './builtins/labTests';
-import orderSets from './builtins/orderSets';
-import categories from './builtins/categories';
+import diseases from './diseases';
+import labTests from './labTests';
+import orderSets from './orderSets';
+import categories from './categories';
 
 export default {
   diseases,
