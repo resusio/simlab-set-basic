@@ -1,5 +1,6 @@
 import { labTestType, labTestGenerateMethod } from '@resusio/simlab';
 
+import bloodGasTests from './labTests/bloodGas';
 import cardiacTests from './labTests/cardiac';
 import chemistryTests from './labTests/chemistry';
 import coagulationTests from './labTests/coagulation';
@@ -15,13 +16,14 @@ import urinalysisTests from './labTests/urinalysis';
  * values, names, and information on how to generate the result.
  */
 const labTests: labTestType[] = [
+  ...bloodGasTests,
   ...cardiacTests,
   ...chemistryTests,
   ...coagulationTests,
   ...hematologyTests,
   ...hepatologyTests,
   ...renalTests,
-  ...urinalysisTests
+  ...urinalysisTests,
 ];
 
 export default labTests;

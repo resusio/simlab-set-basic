@@ -10,7 +10,7 @@ const orderSets: orderSetType[] = [
     id: 'cbc',
     nomenclature: {
       long: 'Complete Blood Count',
-      short: 'CBC'
+      short: 'CBC',
     },
     components: [
       'wbc',
@@ -24,57 +24,75 @@ const orderSets: orderSetType[] = [
       'lymph',
       'mono',
       'eosin',
-      'baso'
-    ]
+      'baso',
+    ],
   },
   {
     id: 'lytes',
     nomenclature: {
       long: 'Electrolytes',
-      short: 'Lytes'
+      short: 'Lytes',
     },
-    components: ['na', 'cl', 'k', 'hco3', 'ag', 'bun', 'cr', 'gfr', 'gluc']
+    components: ['na', 'cl', 'k', 'hco3', 'ag', 'bun', 'cr', 'gfr', 'gluc'],
   },
   {
     id: 'chem7',
     nomenclature: {
       long: 'Chemistry (7-test)',
-      short: 'CHEM-7'
+      short: 'CHEM-7',
     },
-    components: ['lytes']
+    components: ['lytes'],
   },
   {
     id: 'coags',
     nomenclature: {
       long: 'Coagulation profile',
-      short: 'Coags'
+      short: 'Coags',
     },
-    components: ['inr', 'ptt']
+    components: ['inr', 'ptt'],
   },
   {
     id: 'basic',
     nomenclature: {
       long: 'Basic Bloodwork',
-      short: 'Basic'
+      short: 'Basic',
     },
-    components: ['cbc', 'lytes', 'coags', 'alt']
+    components: ['cbc', 'lytes', 'coags', 'alt'],
   },
   {
     id: 'cardiac',
     nomenclature: {
       long: 'Cardiac Bloodwork',
-      short: 'Cardiac'
+      short: 'Cardiac',
     },
-    components: ['basic', 'hstnt']
+    components: ['basic', 'hstnt'],
   },
   {
     id: 'hepatic',
     nomenclature: {
       long: 'Hepatic Panel',
-      short: 'Hepatic'
+      short: 'Hepatic',
     },
-    components: ['alt', 'ast', 'alp', 'ggt', 'lip', 'tbili']
-  }
+    components: ['alt', 'ast', 'alp', 'ggt', 'lip', 'tbili'],
+  },
+  {
+    id: 'abg',
+    nomenclature: {
+      long: 'Arterial Blood Gas',
+      short: 'ABG',
+    },
+    components: [
+      'abg-ph',
+      'abg-paco2',
+      'abg-pao2',
+      'abg-hco3',
+      'abg-be',
+      'abg-k',
+      'abg-na',
+      'abg-cl',
+      'abg-lactate',
+    ],
+  },
 ];
 
 export default orderSets;

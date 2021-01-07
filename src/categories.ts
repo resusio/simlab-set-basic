@@ -6,12 +6,13 @@ import { categoryType } from '@resusio/simlab';
  * appearing lab reports.
  */
 const categories: categoryType[] = [
-  { categoryName: 'Hematology', sortIndex: 10 },
-  { categoryName: 'Coagulation', sortIndex: 20 },
-  { categoryName: 'Chemistry', sortIndex: 30 },
-  { categoryName: 'Renal Function', sortIndex: 40 },
-  { categoryName: 'Cardiac', sortIndex: 50 },
-  { categoryName: 'Hepatology', sortIndex: 60 }
+  { categoryName: 'Arterial Blood Gas', sortIndex: 10 },
+  { categoryName: 'Hematology', sortIndex: 20 },
+  { categoryName: 'Coagulation', sortIndex: 30 },
+  { categoryName: 'Chemistry', sortIndex: 40 },
+  { categoryName: 'Renal Function', sortIndex: 50 },
+  { categoryName: 'Cardiac', sortIndex: 60 },
+  { categoryName: 'Hepatology', sortIndex: 70 },
 ];
 
 export default categories;

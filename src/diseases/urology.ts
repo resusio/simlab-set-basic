@@ -11,22 +11,22 @@ const urologyDiseases: diseaseType[] = [
     nomenclature: {
       long: 'Renal Colic',
       short: 'Renal Colic',
-      description: 'Renal colic with hematuria and mild renal impairement.'
+      description: 'Renal colic with hematuria and mild renal impairement.',
     },
     testOverrides: [
       {
         id: 'cr',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 1.25,
-        sd: (mean, sd) => sd
+        sd: (mean, sd) => sd,
       },
       {
         id: 'udip-rbc',
         method: labTestGenerateMethod.DERIVED,
-        calculate: () => `${random.int(3, 4)}+`
-      }
-    ]
-  }
+        calculate: () => `${random.int(3, 4)}+`,
+      },
+    ],
+  },
 ];
 
 export default urologyDiseases;

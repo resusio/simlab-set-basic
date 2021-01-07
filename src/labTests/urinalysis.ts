@@ -8,19 +8,19 @@ const urinalysisLabTests: labTestType[] = [
       long: 'Urinalysis RBCs',
       short: 'Dip RBCs',
       category: 'Urinalysis',
-      orderInCategory: 10
+      orderInCategory: 10,
     },
     display: {
       computeTestResultFlag: (testResult) =>
         testResult === 'Negative' ? testResultFlag.NORMAL : testResultFlag.ABNORMAL,
-      units: [{ id: /.*/, unitDisplay: '', precision: 0, convert: (value) => value }]
+      units: [{ id: /.*/, unitDisplay: '', precision: 0, convert: (value) => value }],
     },
     generate: {
       method: labTestGenerateMethod.DERIVED,
       valueType: 'string',
-      calculate: () => 'Negative'
-    }
-  }
+      calculate: () => 'Negative',
+    },
+  },
 ];
 
 export default urinalysisLabTests;

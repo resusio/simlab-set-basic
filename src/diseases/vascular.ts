@@ -10,28 +10,28 @@ const vascDiseases: diseaseType[] = [
     nomenclature: {
       long: 'Submassive Pulmonary Embolism',
       short: 'Submassive PE',
-      description: 'A pulmonary embolism with mild troponin elevation due to strain'
+      description: 'A pulmonary embolism with mild troponin elevation due to strain',
     },
     testOverrides: [
       {
         id: 'dimer',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 15,
-        sd: (mean, sd) => sd * 5
+        sd: (mean, sd) => sd * 5,
       },
       {
         id: 'hstnt',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 4,
-        sd: (mean, sd) => sd
+        sd: (mean, sd) => sd,
       },
       {
         id: 'crp',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 10,
-        sd: (mean, sd) => sd * 4
-      }
-    ]
+        sd: (mean, sd) => sd * 4,
+      },
+    ],
   },
   {
     id: 'vasc.pe.massive',
@@ -39,29 +39,29 @@ const vascDiseases: diseaseType[] = [
       long: 'Massive Pulmonary Embolism',
       short: 'Massive PE',
       description:
-        'A pulmonary embolism with marked troponin elevation due to strain and RV failure/infarct'
+        'A pulmonary embolism with marked troponin elevation due to strain and RV failure/infarct',
     },
     testOverrides: [
       {
         id: 'dimer',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 25,
-        sd: (mean, sd) => sd * 2
+        sd: (mean, sd) => sd * 2,
       },
       {
         id: 'hstnt',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 25,
-        sd: (mean, sd) => sd
+        sd: (mean, sd) => sd,
       },
       {
         id: 'crp',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 10,
-        sd: (mean, sd) => sd * 4
-      }
-    ]
-  }
+        sd: (mean, sd) => sd * 4,
+      },
+    ],
+  },
 ];
 
 export default vascDiseases;

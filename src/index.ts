@@ -7,5 +7,5 @@ export default {
   diseases,
   labTests,
   orderSets,
-  categories
+  categories,
 };

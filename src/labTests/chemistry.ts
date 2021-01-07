@@ -7,7 +7,7 @@ const chemistryLabTests: labTestType[] = [
       long: 'Glucose',
       short: 'Gluc',
       category: 'Chemistry',
-      orderInCategory: 10
+      orderInCategory: 10,
     },
     display: {
       lowLimit: () => 3.8,
@@ -17,16 +17,16 @@ const chemistryLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: 'mmol/L',
           precision: 1,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 7.45,
-      sd: () => 1.86224489795918
-    }
+      sd: () => 1.86224489795918,
+    },
   },
   {
     id: 'na',
@@ -34,7 +34,7 @@ const chemistryLabTests: labTestType[] = [
       long: 'Sodium',
       short: 'Na',
       category: 'Chemistry',
-      orderInCategory: 20
+      orderInCategory: 20,
     },
     display: {
       lowLimit: () => 135,
@@ -44,16 +44,16 @@ const chemistryLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: 'mmol/L',
           precision: 0,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 140,
-      sd: () => 2.55102040816327
-    }
+      sd: () => 2.55102040816327,
+    },
   },
   {
     id: 'k',
@@ -61,7 +61,7 @@ const chemistryLabTests: labTestType[] = [
       long: 'Potassium',
       short: 'K',
       category: 'Chemistry',
-      orderInCategory: 30
+      orderInCategory: 30,
     },
     display: {
       lowLimit: () => 3.5,
@@ -71,16 +71,16 @@ const chemistryLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: 'mmol/L',
           precision: 1,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 4.25,
-      sd: () => 0.38265306122449
-    }
+      sd: () => 0.38265306122449,
+    },
   },
   {
     id: 'cl',
@@ -88,7 +88,7 @@ const chemistryLabTests: labTestType[] = [
       long: 'Chloride',
       short: 'Cl',
       category: 'Chemistry',
-      orderInCategory: 40
+      orderInCategory: 40,
     },
     display: {
       lowLimit: () => 98,
@@ -98,16 +98,16 @@ const chemistryLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: 'mmol/L',
           precision: 0,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 102,
-      sd: () => 2.04081632653061
-    }
+      sd: () => 2.04081632653061,
+    },
   },
   {
     id: 'hco3',
@@ -115,7 +115,7 @@ const chemistryLabTests: labTestType[] = [
       long: 'Bicarbonate',
       short: 'HCO3',
       category: 'Chemistry',
-      orderInCategory: 50
+      orderInCategory: 50,
     },
     display: {
       lowLimit: () => 24,
@@ -125,16 +125,17 @@ const chemistryLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: 'mmol/L',
           precision: 0,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 27,
-      sd: () => 1.53061224489796
-    }
+      sd: () => 1.53061224489796,
+      allowNegative: false,
+    },
   },
   {
     id: 'ag',
@@ -142,7 +143,7 @@ const chemistryLabTests: labTestType[] = [
       long: 'Anion Gap',
       short: 'AG',
       category: 'Chemistry',
-      orderInCategory: 60
+      orderInCategory: 60,
     },
     display: {
       lowLimit: () => 0,
@@ -152,18 +153,45 @@ const chemistryLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: 'mEq/L',
           precision: 0,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.DERIVED,
       valueType: 'number',
       requires: ['na', 'cl', 'hco3'],
       calculate: (testResults) =>
-        asNumber(testResults['na']) - asNumber(testResults['cl']) - asNumber(testResults['hco3'])
-    }
-  }
+        asNumber(testResults['na']) - asNumber(testResults['cl']) - asNumber(testResults['hco3']),
+    },
+  },
+  {
+    id: 'lactate',
+    nomenclature: {
+      long: 'Lactate',
+      short: 'Lactate',
+      category: 'Chemistry',
+      orderInCategory: 70,
+    },
+    display: {
+      lowLimit: () => 0,
+      highLimit: () => 2,
+      units: [
+        {
+          id: /.*/,
+          unitDisplay: 'mmol/L',
+          precision: 1,
+          convert: (value) => value,
+        },
+      ],
+    },
+    generate: {
+      method: labTestGenerateMethod.NORMAL,
+      valueType: 'number',
+      mean: () => 0.75,
+      sd: () => 0.25,
+    },
+  },
 ];
 
 export default chemistryLabTests;

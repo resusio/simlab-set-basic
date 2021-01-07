@@ -7,19 +7,19 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Aspartate Aminotransferase',
       short: 'AST',
       category: 'Hepatology',
-      orderInCategory: 40
+      orderInCategory: 40,
     },
     display: {
       lowLimit: () => 18,
       highLimit: () => 40,
-      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }]
+      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 29,
-      sd: () => 5.61224489795918
-    }
+      sd: () => 5.61224489795918,
+    },
   },
   {
     id: 'alt',
@@ -27,19 +27,19 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Alanine Aminotransferase',
       short: 'ALT',
       category: 'Hepatology',
-      orderInCategory: 50
+      orderInCategory: 50,
     },
     display: {
       lowLimit: () => 17,
       highLimit: () => 63,
-      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }]
+      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 40,
-      sd: () => 11.734693877551
-    }
+      sd: () => 11.734693877551,
+    },
   },
   {
     id: 'ggt',
@@ -47,19 +47,19 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Gamma-glutamyl Transferase',
       short: 'GGT',
       category: 'Hepatology',
-      orderInCategory: 60
+      orderInCategory: 60,
     },
     display: {
       lowLimit: () => 10,
       highLimit: () => 48,
-      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }]
+      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 29,
-      sd: () => 9.69387755102041
-    }
+      sd: () => 9.69387755102041,
+    },
   },
   {
     id: 'alp',
@@ -67,19 +67,19 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Alkaline Phosphatase',
       short: 'ALP',
       category: 'Hepatology',
-      orderInCategory: 70
+      orderInCategory: 70,
     },
     display: {
       lowLimit: () => 38,
       highLimit: () => 126,
-      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }]
+      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 82,
-      sd: () => 22.4489795918367
-    }
+      sd: () => 22.4489795918367,
+    },
   },
   {
     id: 'dbili',
@@ -87,7 +87,7 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Bilirubin Direct',
       short: 'Dbili',
       category: 'Hepatology',
-      orderInCategory: 20
+      orderInCategory: 20,
     },
     display: {
       lowLimit: () => 0,
@@ -97,16 +97,16 @@ const hepatologyLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: '&micro;mol/L',
           precision: 0,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 2,
-      sd: () => 1.02040816326531
-    }
+      sd: () => 1.02040816326531,
+    },
   },
   {
     id: 'ibili',
@@ -114,7 +114,7 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Bilirubin Indirect',
       short: 'Ibili',
       category: 'Hepatology',
-      orderInCategory: 30
+      orderInCategory: 30,
     },
     display: {
       lowLimit: () => 0,
@@ -124,16 +124,16 @@ const hepatologyLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: '&micro;mol/L',
           precision: 0,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 9.5,
-      sd: () => 4.8469387755102
-    }
+      sd: () => 4.8469387755102,
+    },
   },
   {
     id: 'tbili',
@@ -141,7 +141,7 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Bilirubin Total',
       short: 'Tbili',
       category: 'Hepatology',
-      orderInCategory: 10
+      orderInCategory: 10,
     },
     display: {
       lowLimit: () => 8,
@@ -151,16 +151,16 @@ const hepatologyLabTests: labTestType[] = [
           id: /.*/,
           unitDisplay: '&micro;mol/L',
           precision: 0,
-          convert: (value) => value
-        }
-      ]
+          convert: (value) => value,
+        },
+      ],
     },
     generate: {
       method: labTestGenerateMethod.DERIVED,
       valueType: 'number',
       requires: ['dbili', 'ibili'],
-      calculate: (testResults) => asNumber(testResults['dbili']) + asNumber(testResults['ibili'])
-    }
+      calculate: (testResults) => asNumber(testResults['dbili']) + asNumber(testResults['ibili']),
+    },
   },
   {
     id: 'lip',
@@ -168,20 +168,20 @@ const hepatologyLabTests: labTestType[] = [
       long: 'Lipase',
       short: 'Lip',
       category: 'Hepatology',
-      orderInCategory: 80
+      orderInCategory: 80,
     },
     display: {
       lowLimit: () => 0,
       highLimit: () => 160,
-      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }]
+      units: [{ id: /.*/, unitDisplay: 'U/L', precision: 0, convert: (value) => value }],
     },
     generate: {
       method: labTestGenerateMethod.NORMAL,
       valueType: 'number',
       mean: () => 80,
-      sd: () => 40.8163265306122
-    }
-  }
+      sd: () => 40.8163265306122,
+    },
+  },
 ];
 
 export default hepatologyLabTests;
