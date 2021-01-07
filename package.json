@@ -1,0 +1,39 @@
+{
+  "name": "@resusio/simlab-set-basic",
+  "version": "1.0.0",
+  "description": "Basic set of diseases, lab tests, and order sets, to be used with @resusio/simlab",
+  "homepage": "https://github.com/resusio/simlab-set-basic#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt:check": "prettier --check \"src/**/*\"",
+    "fmt:write": "prettier --write \"src/**/*\"",
+    "clean": "rm -rf ./dist",
+    "build": "tsc",
+    "prod": "node ./dist/index.js",
+    "dev": "nodemon",
+    "start": "npm run dev"
+  },
+  "author": "Tristan Jones <jones.tristand@gmail.com> (https://www.tdjones.ca/)",
+  "license": "MIT",
+  "dependencies": {
+    "@resusio/simlab": "^0.7.0",
+    "random": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/random": "^2.1.1",
+    "nodemon": "^2.0.6",
+    "prettier": "^1.19.1",
+    "ts-node": "^9.1.0",
+    "typedoc": "^0.19.2",
+    "typescript": "^4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resusio/simlab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/resusio/simlab.git"
+  }
+}
