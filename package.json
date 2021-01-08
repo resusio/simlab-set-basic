@@ -18,8 +18,10 @@
   "author": "Tristan Jones <jones.tristand@gmail.com> (https://www.tdjones.ca/)",
   "license": "MIT",
   "dependencies": {
-    "@resusio/simlab": "^1.2.0",
     "random": "^2.2.0"
+  },
+  "peerDependencies": {
+    "@resusio/simlab": "1.2.x"
   },
   "devDependencies": {
     "@types/random": "^2.1.1",
