@@ -15,10 +15,14 @@ const coagulationLabTests: labTestType[] = [
       units: [{ id: /.*/, unitDisplay: '', precision: 1, convert: (value) => value }],
     },
     generate: {
-      method: labTestGenerateMethod.NORMAL, // TODO: Should be caculated from PTT
+      method: labTestGenerateMethod.DERIVED,
       valueType: 'number',
-      mean: () => 1.05,
-      sd: () => 0.0765306122448979,
+      requires: ['pt'],
+      calculate: (testResults, patient) => {
+        const pt = testResults['pt'] as number;
+
+        return Math.pow(pt / 11.5, 0.94);
+      },
     },
   },
   {
