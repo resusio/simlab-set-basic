@@ -1,3 +1,4 @@
+import random from 'random';
 import { labTestGenerateMethod, diseaseType } from '@resusio/simlab';
 
 /**
@@ -29,6 +30,17 @@ const traumaDiseases: diseaseType[] = [
         id: 'bun',
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => mean * 3,
+        sd: (mean, sd) => sd,
+      },
+      {
+        id: 'udip-rbc',
+        method: labTestGenerateMethod.DERIVED,
+        calculate: () => `${random.int(3, 4)}+`,
+      },
+      {
+        id: 'udip-sg',
+        method: labTestGenerateMethod.NORMAL,
+        mean: (mean) => mean + 0.01,
         sd: (mean, sd) => sd,
       },
     ],

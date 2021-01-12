@@ -76,6 +76,26 @@ const orderSets: orderSetType[] = [
     components: ['alt', 'ast', 'alp', 'ggt', 'lip', 'tbili'],
   },
   {
+    id: 'udip',
+    nomenclature: {
+      long: 'Urinalysis Dip',
+      short: 'Urine POC',
+    },
+    components: [
+      'udip-sg',
+      'udip-ph',
+      'udip-leuks',
+      'udip-nitrite',
+      'udip-protein',
+      'udip-glucose',
+      'udip-ketones',
+      'udip-urobili',
+      'udip-bili',
+      'udip-rbc',
+      'udip-menses',
+    ],
+  },
+  {
     id: 'abg',
     nomenclature: {
       long: 'Arterial Blood Gas',

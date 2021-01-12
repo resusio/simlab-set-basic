@@ -13,6 +13,7 @@ const categories: categoryType[] = [
   { categoryName: 'Renal Function', sortIndex: 50 },
   { categoryName: 'Cardiac', sortIndex: 60 },
   { categoryName: 'Hepatology', sortIndex: 70 },
+  { categoryName: 'Urinalysis', sortIndex: 80 },
 ];
 
 export default categories;

@@ -1,3 +1,5 @@
+import random from 'random';
+
 import { labTestGenerateMethod, diseaseType } from '@resusio/simlab';
 
 /**
@@ -85,6 +87,28 @@ const endoDiseases: diseaseType[] = [
         method: labTestGenerateMethod.NORMAL,
         mean: (mean) => 1.5 * 5 + 8, // uses mean of hco3 (5) to calculate resp compensation
         sd: (mean, sd) => sd,
+      },
+      {
+        id: 'udip-sg',
+        method: labTestGenerateMethod.NORMAL,
+        mean: (mean) => mean + 0.01,
+        sd: (mean, sd) => sd,
+      },
+      {
+        id: 'udip-ph',
+        method: labTestGenerateMethod.NORMAL,
+        mean: (mean) => mean - 1.5,
+        sd: (mean, sd) => sd,
+      },
+      {
+        id: 'udip-ketones',
+        method: labTestGenerateMethod.DERIVED,
+        calculate: () => `${random.int(3, 4)}+`,
+      },
+      {
+        id: 'udip-glucose',
+        method: labTestGenerateMethod.DERIVED,
+        calculate: () => '4+',
       },
     ],
   },
