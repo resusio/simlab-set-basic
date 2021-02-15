@@ -6,15 +6,6 @@ import { labTestGenerateMethod, diseaseType } from '@resusio/simlab';
  */
 const cvDiseases: diseaseType[] = [
   {
-    id: 'cv.nstemi.nsvt',
-    nomenclature: {
-      long: 'Non-ST Elevation Myocardial Infarction with Electrical Instability',
-      short: 'NSTEMI',
-      description: 'ACS with elevated troponin and ck-mb and NSVT',
-    },
-    testOverrides: [],
-  },
-  {
     id: 'cv.nstemi',
     nomenclature: {
       long: 'Non-ST Elevation Myocardial Infarction',
