@@ -1,6 +1,6 @@
 {
   "name": "@resusio/simlab-set-basic",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Basic set of diseases, lab tests, and order sets, to be used with @resusio/simlab",
   "homepage": "https://github.com/resusio/simlab-set-basic#readme",
   "main": "dist/index.js",
